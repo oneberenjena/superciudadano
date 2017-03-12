@@ -3,8 +3,11 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Iniciar Sesión</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">	
 	<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/custom.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="jumbotron">
@@ -20,10 +23,131 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-6 col-xs-offset-3">
-				<button type="button" class="btn btn-primary btn-lg btn-block">Inicia tu Supersesion</button>
-				<button type="button" class="btn btn-default btn-lg btn-block">Registrate como SuperCiudadano</button>
+				<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#formulario1">Inicia tu Supersesion</button>
+				
+				<button type="button" class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#formulario2">Registrate como SuperCiudadano</button>
 			</div>
 		</div>
 	</div>
+
+<!-- Inicio formulario 1 de Iniciar Sesion-->
+	<div class="modal fade" id="formulario1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          
+        </div>
+        <div class="modal-body">
+    <section class="container">
+    
+    <div class="row">
+      <article class="col-sm-6">
+        <h2 id ="tituloForm" class="text-center">Inicio de Sesion</h2>
+      
+
+          
+          <input type="text" class="form-control" placeholder="Nombre de usuario">
+       
+           <div class="form-group">
+            <input type="password" class="form-control" placeholder="Escribe tu contrasena">
+          </div>
+         
+         
+          <button class="btn btn-info" type="submit">Enviar</button>
+        </form>
+      </article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Fin Formulario1 -->
+
+  <!-- Inicio formulario 2 de Registro-->
+  <div class="modal fade" id="formulario2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          
+        </div>
+        <div class="modal-body">
+    <section class="container">
+    
+    <div class="row">
+      <article class="col-sm-6">
+        <h2 id ="tituloForm" class="text-center">Registro de Usuario</h2>
+        <hr>
+        <form action="">
+          <div class="form-group">
+            <label for="" id ="tituloForm" >Nombre y Apellido</label>
+            <input type="text" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <input type="email" class="form-control" required placeholder="Escribe tu email">
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="glyphicon glyphicon-user"></i>
+              </div>
+              <input type="text" class="form-control" placeholder="Nombre de usuario">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Escribe tu contrasena">
+          </div>
+
+          <div class="form-group form-inline" id ="tituloForm">
+            <label for="">Tipo de Documento: </label>
+            <select name="" id="" class="form-control">
+              <option value="" selected disabled>--</option>
+              <option value="V">V</option>
+              <option value="E">E</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Numero">
+          </div>
+
+          <div id ="tituloForm" class="form-group">
+            <label for="">Sexo: </label>
+            <label class="radio-inline">
+              <input type="radio" name="sexo" value="Femenino"> Femenino
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="sexo" value="Masculino"> Masculino
+            </label>
+          </div>
+
+          <div class="form-group" id ="tituloForm">
+            <label for="">Fecha de Nacimiento</label>
+            <input type="date" class="form-control">
+          </div>
+
+          <div class="form-group" id ="tituloForm">
+            <input type="tel" class="form-control" placeholder="Escribe tu numero telf">
+          </div>
+
+          
+
+         
+
+          <button class="btn btn-info" type="submit">Enviar</button>
+        </form>
+      </article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Fin Formulario 2 -->
+
 </body>
 </html>
